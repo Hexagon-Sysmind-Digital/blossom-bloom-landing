@@ -1,15 +1,15 @@
 export const siteConfig = {
-  name: "AgencyTemplate",
+  name: "Blossom & Bloom",
 
   description:
-    "Modern landing page template built with Next.js and Tailwind.",
+    "Handcrafted floral arrangements for every occasion. Fresh, local, and made with love.",
 
-  url: "https://example.com",
+  url: "https://blossomandbloom.com",
 
   ogImage: "/images/og.png",
 
   links: {
-    twitter: "https://twitter.com",
-    github: "https://github.com",
+    instagram: "https://instagram.com/blossomandbloom",
+    whatsapp: "https://wa.me/1234567890",
   },
 }
