@@ -1,3 +1,5 @@
+"use client"
+
 import Section from "@/components/ui/Section"
 import Button from "@/components/ui/Button"
 import Image from "next/image"
