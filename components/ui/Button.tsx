@@ -1,13 +1,19 @@
+import React from "react"
+
+type ButtonProps = {
+  children: React.ReactNode
+  variant?: "primary" | "secondary" | "outline"
+  className?: string
+} & React.ButtonHTMLAttributes<HTMLButtonElement>
+
 export default function Button({
   children,
   variant = "primary",
   className = "",
-}: {
-  children: React.ReactNode
-  variant?: "primary" | "secondary" | "outline"
-  className?: string
-}) {
-  const base = "px-8 py-3.5 rounded-full font-medium transition-all duration-300 shadow-sm hover:shadow-lg cursor-pointer text-sm tracking-wide uppercase"
+  ...props
+}: ButtonProps) {
+  const base =
+    "px-8 py-3.5 rounded-full font-medium transition-all duration-300 shadow-sm hover:shadow-lg cursor-pointer text-sm tracking-wide uppercase"
 
   const variants = {
     primary:
@@ -19,7 +25,10 @@ export default function Button({
   }
 
   return (
-    <button className={`${base} ${variants[variant]} ${className}`}>
+    <button
+      className={`${base} ${variants[variant]} ${className}`}
+      {...props}
+    >
       {children}
     </button>
   )
